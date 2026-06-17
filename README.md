@@ -7,9 +7,9 @@ A fully functional Lead Management Module built for a CRM/SaaS product. Designed
 
 ## Live Demo
 
-🔗 **[Live Demo Link]** — *(add Vercel link here before submitting)*
+🔗 **[Live Demo Link]** — https://crm-lead-management-five.vercel.app
 
-📁 **[GitHub Repository Link]** — *(add GitHub link here before submitting)*
+📁 **[GitHub Repository Link]** — https://github.com/YashMore-11/crm-lead-management
 
 ---
 
