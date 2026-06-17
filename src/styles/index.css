@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-canvas-light text-ink-800 dark:bg-canvas-dark dark:text-ink-50;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  * {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-200 dark:bg-ink-600 rounded-full;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply animate-pulse bg-ink-100 dark:bg-ink-700 rounded;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-in-backdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out both;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slide-in-backdrop {
+  animation: slide-in-backdrop 0.2s ease-out both;
+}
